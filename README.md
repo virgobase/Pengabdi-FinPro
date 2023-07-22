@@ -28,7 +28,7 @@ Our business metric is Attrition rate.
 Stage 1 is Exploratory Data Analysis or EDA. In this stage we explore data from descriptive statistic into visualization for a better data and business understanding.
 
 ### Descriptive Statistic
-We conducted some analysis for checking if there are any missing data, duplicates, incorrect datatype and strange data value in our dataset. Based on the dataset we have [Descriptive Statistic](), there are no missing value and duplicates in our dataset. Hence there are few interesting columns such as, EmployeeCount and StandardHours that show 1 unique value only. While for 'EmployeeNumber', we assumed that the number refers to the employee ID. The only reason why it has a higher number than the total current employees is that the missing IDs are those employees who no longer work at the company.
+We conducted some analysis for checking if there are any missing data, duplicates, incorrect datatype and strange data value in our dataset. Based on the dataset we have [Descriptive Statistic](https://github.com/zerobase-one/Pengabdi-FinPro/blob/1d34687c670307119564ab8319ad5f524cf875bc/Stage%201/Descriptive%20Statistic.ipynb), there are no missing value and duplicates in our dataset. Hence there are few interesting columns such as, EmployeeCount and StandardHours that show 1 unique value only. While for 'EmployeeNumber', we assumed that the number refers to the employee ID. The only reason why it has a higher number than the total current employees is that the missing IDs are those employees who no longer work at the company.
 
 ### Univariate Analysis
 
