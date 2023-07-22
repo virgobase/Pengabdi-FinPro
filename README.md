@@ -21,8 +21,20 @@ Here are some objectives to reach our goal:
 - Designing program recommendations for company based on model results
 
 ### Business Metrics
-Our business metrics are Attrition rate and Turnover rate. 
+Our business metric is Attrition rate. 
 ***
 
 ## STAGE 1
+Stage 1 is Exploratory Data Analysis or EDA. In this stage we explore data from descriptive statistic into visualization for a better data and business understanding.
+
+### Descriptive Statistic
+
+
+### Univariate Analysis
+
+
+### Multivariate Analysis
+
+
+### Insights and Business Recommendations
 
