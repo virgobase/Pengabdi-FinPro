@@ -2,7 +2,7 @@
 Rakamin final projects repository of Team Pengabdi FinPro 
 
 ## STAGE 0 
-On this stage, we basically prepare the framework of this project. We have selected the Employee Attrition dataset beforehand, which we downloaded from Kaggle [link here](https://www.kaggle.com/datasets/patelprashant/employee-attrition)  or you can check on the folder list above.
+On this stage, we basically prepare the framework of this project. We have selected the Employee Attrition dataset beforehand, which we downloaded from Kaggle [Employee Attrition](https://www.kaggle.com/datasets/patelprashant/employee-attrition)  or you can check on the folder list above.
 
 ### Problem
 The problem we want to solve is the attrition rate of the company that reached 16.1%. While based on Maier (2015) attrition rate of a company considered to be high if it surpasses 5% within one period (yearly). So, the attrition rate from our dataset is considered high and that becomes our main problem.
@@ -28,7 +28,7 @@ Our business metric is Attrition rate.
 Stage 1 is Exploratory Data Analysis or EDA. In this stage we explore data from descriptive statistic into visualization for a better data and business understanding.
 
 ### Descriptive Statistic
-
+We conducted some analysis for checking if there are any missing data, duplicates, incorrect datatype and strange data value in our dataset. Based on the dataset we have [Descriptive Statistic](), there are no missing value and duplicates in our dataset. Hence there are few interesting columns such as, EmployeeCount and StandardHours that show 1 unique value only. While for 'EmployeeNumber', we assumed that the number refers to the employee ID. The only reason why it has a higher number than the total current employees is that the missing IDs are those employees who no longer work at the company.
 
 ### Univariate Analysis
 
