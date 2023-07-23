@@ -81,7 +81,7 @@ In this phase, we focus on presenting the effect of Low Monthly Income on Attrit
 5. We checked how the ratio of Attrition based on Age_Cat
 6. Lastly, we concluded some recommendations
 
-#### What we have done Satisfaction feature? ####
+#### What we have done on Satisfaction features? ####
 1. Firstly, we checked the Attrition's ratio on JobSatisfaction, EnvironmentSatisfaction and RelationshipSatisfaction features
 2. Then, we grouped those features and checked mean value of all features on Attrition
 3. Lastly, we concluded some recommendations
