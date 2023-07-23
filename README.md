@@ -71,4 +71,19 @@ While down below are numerical features that will be processed:
 - YearsWithCurrManager
 
 ### Insights and Business Recommendations
+In this phase, we focus on presenting the effect of Low Monthly Income on Attrition and the effect of employees' satisfaction on job, environment and relationship on their decision of attrition.
 
+#### What we have done on MonthlyIncome feature? #### 
+1. We modified this feature and classify into 3 classes (low, medium, high) based on its quartile.
+2. We checked its Attrition ratio for each classes
+3. We checked its relation with JobRole
+4. We modified Age feature into Age_Cat and checked its relation with 'Low' MonthlyIncome, JobRole and Attrition
+5. We checked how the ratio of Attrition based on Age_Cat
+6. Lastly, we concluded some recommendations
+
+#### What we have done Satisfaction feature? ####
+1. Firstly, we checked the Attrition's ratio on JobSatisfaction, EnvironmentSatisfaction and RelationshipSatisfaction features
+2. Then, we grouped those features and checked mean value of all features on Attrition
+3. Lastly, we concluded some recommendations
+
+For more visual pleasing works you can check it [here](https://github.com/zerobase-one/Pengabdi-FinPro/blob/main/Stage%201/Stage%201%20-%20Pengabdi%20FinPro.pdf)
