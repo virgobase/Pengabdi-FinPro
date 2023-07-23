@@ -40,7 +40,35 @@ Then we come up with few recommendations related to the analysis for pre-process
 - Need to handle features that having outliers using Z-score > 3 after doing the transformation
 
 ### Multivariate Analysis
+#### Feature Selection Phase ####
+At this stage, we used the Chi-Square test to see the significance of the categorical type features to the 'Attrition' target. Meanwhile for numerical features we use Heatmap Correlation. For more visually pleasing you can [check here.](https://github.com/zerobase-one/Pengabdi-FinPro/blob/main/Stage%201/Multivariate%20Analysis.ipynb)
+By finishing this step we could finally decide which categorical and numerical features will be used in the next stage.
 
+Here are the list of categorical features:
+- BusinessTravel
+- Department
+- EducationField
+- MaritalStatus
+- JobRole
+- OverTime
+
+While down below are numerical features that will be processed:
+- Age
+- DailyRate
+- DistanceFromHome
+- EnvironmentSatisfaction
+- JobInvolvement
+- JobLevel
+- JobSatisfaction
+- MonthlyIncome
+- RelationshipSatisfaction
+- StockOptionLevel
+- TotalWorkingYears
+- TrainingTimesLastYear
+- WorkLifeBalance
+- YearsAtCompany
+- YearsInCurrentRole
+- YearsWithCurrManager
 
 ### Insights and Business Recommendations
 
