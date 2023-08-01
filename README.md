@@ -89,3 +89,13 @@ In this phase, we focus on presenting the effect of Low Monthly Income on Attrit
 3. Lastly, we concluded some recommendations
 
 For more visual pleasing works you can check it [here](https://github.com/zerobase-one/Pengabdi-FinPro/blob/main/Stage%201/Stage%201%20-%20Pengabdi%20FinPro.pdf)
+
+***
+# STAGE 2
+## Data Cleansing 
+
+
+## Feature Engineering
+
+
+***
