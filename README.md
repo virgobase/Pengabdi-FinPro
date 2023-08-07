@@ -92,10 +92,76 @@ For more visual pleasing works you can check it [here](https://github.com/zeroba
 
 ***
 # STAGE 2
-## Data Cleansing 
+Down below are brief explanation of how this stage be handled in jupyter notebook and you can [check here](https://github.com/zerobase-one/Pengabdi-FinPro/blob/main/Stage%202/Stage%202%20-%20Pengabdi%20FinPro%20(1).ipynb) for the python code.
 
+## Data Cleansing & Extracting Features
 
-## Feature Engineering
+**Handling Missing & Duplicated Data**
+There is no missing and duplicated data. 
 
+**Extracting Features**
+- First of all, we dropped some features that only have 1 unique value like,'EmployeeNumber','Over18','StandardHours' or we assumed has no relevancy towards target 'Attrition' like 'EmployeeCount'.
+
+- Furthermore, we have added new features based on the available features. The first feature is 'Accumulated_Satisfaction' which is obtained from the average of 'Environment Satisfaction', 'JobInvolvement', 'JobSatisfaction', 'RelationshipSatisfaction', and 'WorkLifeBalance' features. This feature is an average value, accumulated employee satisfaction from various aspects. Based on the heatmap correlation, it is known that the new feature 'Accumulated_Satisfaction' has a higher correlation with Attrition (target) than the five features above. So that the next five features are dropped.
+  
+- The second extraction feature is 'YearsWorkingPerCompany' which is obtained from the 'TotalWorkingYears' divided by 'NumCompaniesWorked'. Because data with the value “inf” was found in this new feature, row data was deleted in the 'NumCompaniesWorked' feature which has a value of 0 (zero) and in the 'TotalWorkingYears' and 'YearsAtCompany' features which have different row values between the two features. Furthermore, it is known that this new feature has a positively skewed distribution, which will be transformed later for this feature.
+So that the dimensions of the dataframe after extraction and drop are made up of 1273 rows & 28 columns. This feature is considered important because it can simultaneously show employee loyalty to the company. The greater the employee's value on this feature, the more loyal the employee is to his/her job and company.
+
+**Features Transformation**
+Log1p Transformation is performed for features with a positive skewed distribution so that they are close to or normally distributed, namely: 'DistanceFromHome', 'MonthlyIncome', 'TotalWorkingYears', 'YearsAtCompany', 'YearsInCurrentRole', 'YearsWithCurrManager', 'PercentSalaryHike', 'YearsWorkingPerCompany'.
+
+**Handle Outliers**
+The Z-Score is calculated for each feature, then the rows of data that have a Z-score > 3 (Outlier) will be removed. The deleted data rows are as many as 15 rows.
+
+**Encode Categorical Features**
+One-Hot Encoded for the following categorical features : 'BusinessTravel', 'Department', 'EducationField', 'MaritalStatus', 'JobRole'. It was found that the number of features formed increased to 46 features. In addition, for the Overtime and Gender features, the value is changed from boolean to binary 1/0.
+
+**Split & Scalling Data**
+Then, we pplit Data Train and Data Test. After that, a scaler 'fit.transform' is performed on the Data Train while a scaler 'transform' on the Data Test.
+
+**Handle Imbalance Class**
+Handle imbalance target (Attrition) on Data Train by using oversampling technique.
+
+## Feature Selection
+After the data cleansing has been completed, feature filtering will then be carried out in the training data because there are still 46 features and 1 target which causes the data to become quite complex.
+
+Based on the results of the correlation between features with the correlation of each feature with the target (Attrition), features that have a correlation value <= 0.07 will be dropped. Thus, 28 features are obtained that are correlated and relevant to the target which will then be used in the machine learning model.
+These features are:
+1. Age
+2. DistanceFromHome
+3. JobLevel
+4. MonthlyIncome
+5. OverTime
+6. StockOptionLevel
+7. TotalWorkingYears
+8. TrainingTimesLastYear
+9. YearsAtCompany
+10. YearsInCurrentRole
+11. YearsWithCurrManager
+12. Accumulated_Satisfaction
+13. YearsWorkingPerCompany
+14. BusinessTravel_Non-Travel
+15. BusinessTravel_Travel_Frequently
+16. BusinessTravel_Travel_Rarely
+17. Department_Research & Development
+18. Department_Sales
+19. EducationField_Medical
+20. MaritalStatus_Divorced
+21. MaritalStatus_Married
+22. MaritalStatus_Single
+23. JobRole_Healthcare Representative
+24. JobRole_Laboratory Technician
+25. JobRole_Manager
+26. JobRole_Manufacturing Director
+27. JobRole_Research Director
+28. JobRole_Sales Representative 
+
+## Feature Recommendations
+These features below are recommendations of new feature that are no exist in the dataset and might have correlation whether directly or indirectly towards target 'Attrition':
+1. **PerformanceFeedback**: Frequency and quality of feedback received by the employee.
+2. **JobStability**: The stability or likelihood of future job changes.
+3. **CareerGrowthOpportunities**: The perceived potential for career advancement within the company.
+4. **CompanyCulture**: Employee perceptions of the overall company culture and values.
+5. **EmployeeEngagement**: The level of employee commitment and emotional attachment to the company.
 
 ***
