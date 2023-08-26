@@ -165,3 +165,105 @@ These features below are recommendations of new feature that are no exist in the
 5. **EmployeeEngagement**: The level of employee commitment and emotional attachment to the company.
 
 ***
+# STAGE 3
+
+**In this stage we focus on build model with high Precision Score**. Why? In the context of employee attrition, precision indicates the proportion of predicted employees leaving (positives) who actually do leave (true positives) out of all predicted to leave (both true and false positives). In the context of attrition, a false positive occurs when an employee is predicted to leave, but they actually stay. High precision means that the model is accurate in identifying those who are genuinely at risk of leaving. By reducing false positives, the organization can avoid unnecessary interventions for employees who have no intention of leaving, thus saving resources, time, and potentially preventing unnecessary disruption. 
+
+## Modelling
+**Train model using algorithm:**
+	- Logistic Regression 
+	- Linear SVC
+	- SVM
+	- KNN
+	- Gaussian Naive Bayes 
+	- Perceptron
+	- Stochastic Gradient Descent
+	- Decision Tree
+	- Gradient Boosting Trees
+	- Random Forest
+
+**Training Model Results**
+**Model Precision Score**
+7               Decision Tree           100.00
+9               Random Forest           100.00
+8     Gradient Boosting Trees            94.67
+3                         KNN            90.64
+1                         SVM            87.12
+5                  Perceptron            84.42
+0         Logistic Regression            77.32
+2                  Linear SVC            76.50
+6  Stochastic Gradient Decent            68.76
+4                 Naive Bayes            58.06
+
+**Model  Precision CV 10-Fold**
+9               Random Forest            96.20
+8     Gradient Boosting Trees            89.16
+7               Decision Tree            88.60
+3                         KNN            82.89
+1                         SVM            82.53
+2                  Linear SVC            76.01
+0         Logistic Regression            75.96
+6  Stochastic Gradient Decent            73.68
+5                  Perceptron            73.46
+4                 Naive Bayes            58.13
+
+## Model Evaluation 1
+Evaluate model by their Mean precision score
+
+Best Model: Random Forest
+Precision Scores: [0.97222222, 0.93333333, 0.94666667, 0.97260274, 0.93421053, 0.97260274, 1.0, 0.97260274, 0.98611111, 0.95945946]
+Mean Precision Score: 0.965
+
+## Model Evaluation 2
+Evaluate model by their Mean precision score with 10-fold cross validation adn its standard deviation 
+
+Best Model: Random Forest
+Precision Scores: [0.98591549, 0.93333333, 0.95945946, 0.98611111, 0.93421053, 0.97260274, 0.98611111, 0.95945946, 0.98611111, 0.97260274]
+Mean Precision Score: 0.968
+Standard Deviation of Precision Scores: 0.020
+
+## Hyperparameter Tuning RandomForestClassifier with RandomizedSearchCV
+Best parameters: {'n_estimators': 100, 'min_samples_split': 5, 'min_samples_leaf': 1, 'max_depth': 50, 'criterion': 'gini'}
+Best precision score: 0.9610206865120349
+
+## Check Model with Best Params
+- Random Forest Precision Default Before (Training): 1.0
+- Random Forest Precision CV 10-Fold Default Before (Training): 0.959349593495935
+- Random Forest Precision Best After (Training): 1.0
+- Random Forest Precision CV 10-Fold Best After (Training): 0.9528301886792453
+- Random Forest Precision Best After (Test): 0.6666666666666666
+- Random Forest Precision CV 10-Fold Best After (Test): 0.6428571428571429
+
+**Then we try to predict data test using model with best parameters. This resulting in score 80% precision score**
+
+## Feature Importance
+1. Feature: MonthlyIncome, Score: 0.10109
+2. Feature: YearsWorkingPerCompany, Score: 0.09413
+3. Feature: Accumulated_Satisfaction, Score: 0.08709
+4. Feature: Age, Score: 0.08498
+5. Feature: DailyRate, Score: 0.07232
+6. Feature: OverTime, Score: 0.06828
+7. Feature: DistanceFromHome, Score: 0.05947
+8. Feature: TotalWorkingYears, Score: 0.05674
+9. Feature: YearsAtCompany, Score: 0.04714
+10. Feature: YearsWithCurrManager, Score: 0.04364
+11. Feature: YearsInCurrentRole, Score: 0.03737
+12. Feature: JobLevel, Score: 0.03689
+13. Feature: TrainingTimesLastYear, Score: 0.03364
+14. Feature: StockOptionLevel, Score: 0.03251
+15. Feature: BusinessTravel_Travel_Frequently, Score: 0.02153
+16. Feature: MaritalStatus_Single, Score: 0.01420
+17. Feature: Department_Research & Development, Score: 0.01361
+18. Feature: JobRole_Laboratory Technician, Score: 0.01320
+19. Feature: Department_Sales, Score: 0.01300
+20. Feature: MaritalStatus_Divorced, Score: 0.01189
+21. Feature: MaritalStatus_Married, Score: 0.01120
+22. Feature: BusinessTravel_Travel_Rarely, Score: 0.01107
+23. Feature: JobRole_Healthcare Representative, Score: 0.00798
+24. Feature: BusinessTravel_Non-Travel, Score: 0.00791
+25. Feature: JobRole_Manufacturing Director, Score: 0.00713
+26. Feature: JobRole_Sales Representative, Score: 0.00467
+27. Feature: JobRole_Research Director, Score: 0.00438
+28. Feature: JobRole_Manager, Score: 0.00293
+
+For more detail works and business recommendations, you can [click here](https://github.com/virgobase/Pengabdi-FinPro/blob/main/Stage%203/Stage_3_Pengabdi_FinPro-2.ipynb)
