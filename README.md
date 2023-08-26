@@ -184,28 +184,28 @@ These features below are recommendations of new feature that are no exist in the
 
 **Training Model Results**
 **Model Precision Score**
-7               Decision Tree           100.00
-9               Random Forest           100.00
-8     Gradient Boosting Trees            94.67
-3                         KNN            90.64
-1                         SVM            87.12
-5                  Perceptron            84.42
-0         Logistic Regression            77.32
-2                  Linear SVC            76.50
-6  Stochastic Gradient Decent            68.76
-4                 Naive Bayes            58.06
+1. Decision Tree              100.00
+2. Random Forest              100.00
+3. Gradient Boosting Trees     94.67
+4. KNN        		       90.64
+5. SVM            	       87.12
+6. Perceptron                  84.42
+7. Logistic Regression         77.32
+8. Linear SVC                  76.50
+9. Stochastic Gradient Descent 68.76
+10. Naive Bayes                58.06
 
 **Model  Precision CV 10-Fold**
-9               Random Forest            96.20
-8     Gradient Boosting Trees            89.16
-7               Decision Tree            88.60
-3                         KNN            82.89
-1                         SVM            82.53
-2                  Linear SVC            76.01
-0         Logistic Regression            75.96
-6  Stochastic Gradient Decent            73.68
-5                  Perceptron            73.46
-4                 Naive Bayes            58.13
+1. Random Forest               96.20
+2. Gradient Boosting Trees     89.16
+3. Decision Tree               88.60
+4. KNN            	       82.89
+5. SVM                         82.53
+6. Linear SVC                  76.01
+7. Logistic Regression         75.96
+8. Stochastic Gradient Descent 73.68
+9. Perceptron                  73.46
+10. Naive Bayes                58.13
 
 ## Model Evaluation 1
 Evaluate model by their Mean precision score
